@@ -31,6 +31,7 @@ function CharacterCounter({
     setText(newText);
   };
 
+  const progressPercent = Math.min((wordCount / maxWords) * 100, 100);
   return (
   <section>
     <h1>Character Counter</h1>
@@ -44,18 +45,29 @@ function CharacterCounter({
       <p>
         Word Goal: {wordCount} / {maxWords}
       </p>
-
+        <div className="progress-bar">
+  <div
+    className="progress-fill"
+    style={{ width: `${progressPercent}%` }}
+    ></div>
+    </div>
       {wordCount < minWords && (
-        <p>Keep writing. Minimum goal is {minWords} words.</p>
-      )}
+  <p className="warning">
+    Keep writing. Minimum goal is {minWords} words.
+  </p>
+)}
 
-      {wordCount >= minWords && wordCount <= maxWords && (
-        <p>Good job. You are within the word goal.</p>
-      )}
+{wordCount >= minWords && wordCount <= maxWords && (
+  <p className="success">
+    Good job. You are within the word goal.
+  </p>
+)}
 
-      {wordCount > maxWords && (
-        <p>You went over the maximum word count.</p>
-      )}
+{wordCount > maxWords && (
+  <p className="error">
+    You went over the maximum word count.
+  </p>
+)}
     </div>
   </section>
 );

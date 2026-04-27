@@ -1,4 +1,4 @@
-import { TextInputProps } from '../../types';
+import type { TextInputProps } from '../../types/index';
 
 function TextInput({
   onTextChange,
