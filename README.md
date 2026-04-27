@@ -1,17 +1,48 @@
-# React + TypeScript + Vite
+# Content Tracker
+
+## Overview
+The is a React typescript application that provides real-time feedback as user types
+
+## Features
+- Live character count
+- Live word count
+- Estimated reading time
+- Word goal tracking
+- Visual progress bar
+
+## 
+- React
+- Typescript
+- css
+
+##
+1. Clone the repository
+2. open the local server in your browser
+
+## Reflection
+1. I used 'useState' to store user input and update UI in real time
+2. To calculate reading time I research average adult reading time per minute and used that.
+3. react renders updated value right away when the state changes.
+4. To ensure empty spaces were not included into word count I filitered out empty values.
+
+
+
+
+---------------------
+ React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+ [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+ [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+ React Compiler
 
 The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+#Expanding the ESLint configuration
 
 If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
