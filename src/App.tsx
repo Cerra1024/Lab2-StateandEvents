@@ -12,6 +12,8 @@ function App() {
     .filter((word) => word.length > 0);
 
   const wordCount = text.trim() === '' ? 0 : words.length;
+  const wordsPerMinute = 200;
+  const readingTime = wordCount / wordsPerMinute;
 
   const handleTextChange = (newText: string) => {
     setText(newText);
@@ -29,6 +31,7 @@ function App() {
       <h2>Stats</h2>
       <p>Characters: {characterCount}</p>
       <p>Words: {wordCount}</p>
+      <p>Reading Time: {readingTime.toFixed(2)} minutes</p>
     </main>
   );
 }
